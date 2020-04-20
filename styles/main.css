@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  background-color: #9eaac5;
+}
+.container h1 {
+  color: #1bc58c;
+}
+.container h4 {
+  height: 22px;
+  width: 400px;
+}
+.container input {
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
