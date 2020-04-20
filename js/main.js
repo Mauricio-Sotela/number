@@ -17,7 +17,7 @@ start.addEventListener("click", function () {
   n = random;
   console.log(random);
   
-  text.innerHTML = "Please guess a number, enter it, and press Guess.";
+  text.innerHTML = `Guess a number between ${min} and ${max} `;
 });
 
 // START THE GAME
@@ -26,7 +26,7 @@ guess.addEventListener("click", () => {
   g_number = parseInt(number.value);
   if (g_number > 0) {
     if (n == 0) {
-      alert(`press Start to play`);
+      alert(`Press Start to play`);
     } else if (g_number > n) {
       text.innerHTML = `My number is less than ${g_number}.`;
       number.select();
@@ -40,7 +40,9 @@ guess.addEventListener("click", () => {
       alert(`Well Done! It took you ${times} attempts to guess this number`);
       times=1
     }
-  } else {
+  } else if(min==0||max==0) {
+    alert(`Press Start to play`);
+  }else {
     alert(`Introduce a number between ${min} and ${max} `);
   }
 });
