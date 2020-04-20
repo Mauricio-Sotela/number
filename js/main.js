@@ -45,5 +45,6 @@ guess.addEventListener("click", () => {
     alert(`Press Start to play`);
   }else {
     alert(`Introduce a number between ${min} and ${max} `);
+    number.focus();
   }
 });
