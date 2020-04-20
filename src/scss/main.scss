@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container{
+    max-width: 400px;
+    background-color: rgb(158, 170, 197);
+    
+    h1{
+        color: rgb(27, 197, 140);
+    }
+    h4{
+        height: 22px;
+        width: 400px;
+    }
+    input{
+        width: 50px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+}
