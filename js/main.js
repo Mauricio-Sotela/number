@@ -6,6 +6,8 @@ const text = document.querySelector(".text");
 const number = document.querySelector("#number");
 const guess = document.querySelector(".guess_button");
 
+
+
 // GENERATE A RANDOM NUMBER
 max=0;
 min=0;
@@ -15,9 +17,8 @@ start.addEventListener("click", function () {
     min = parseInt(menor.value);
   random = Math.floor(Math.random() * (max - min + 1) + min);
   n = random;
-  console.log(random);
-  
   text.innerHTML = `Guess a number between ${min} and ${max} `;
+  number.focus();
 });
 
 // START THE GAME
