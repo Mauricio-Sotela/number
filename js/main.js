@@ -7,12 +7,16 @@ const number = document.querySelector("#number");
 const guess = document.querySelector(".guess_button");
 
 // GENERATE A RANDOM NUMBER
-max = parseInt(mayor.value);
-min = parseInt(menor.value);
+max=0;
+min=0;
 n = 0;
 start.addEventListener("click", function () {
+    max = parseInt(mayor.value);
+    min = parseInt(menor.value);
   random = Math.floor(Math.random() * (max - min + 1) + min);
   n = random;
+  console.log(random);
+  
   text.innerHTML = "Please guess a number, enter it, and press Guess.";
 });
 
@@ -25,15 +29,18 @@ guess.addEventListener("click", () => {
       alert(`press Start to play`);
     } else if (g_number > n) {
       text.innerHTML = `My number is less than ${g_number}.`;
+      number.select();
       times++;
     } else if (g_number < n) {
       text.innerHTML = `My number is greater than ${g_number}.`;
+      number.select();
       times++;
     } else {
       text.innerHTML = `Congratulations!`;
       alert(`Well Done! It took you ${times} attempts to guess this number`);
+      times=1
     }
   } else {
-    alert(`Introduce your number greater than 0`);
+    alert(`Introduce a number between ${min} and ${max} `);
   }
 });
